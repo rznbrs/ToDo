@@ -103,27 +103,5 @@ public class TaskControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.completed").value(true));
     }
-//    @Test
-//    public void testMarkTaskAsCompleted_TaskNotFound() throws Exception {
-//        Long taskId = 999L;
-//
-//        // Mock servis, task bulunamadığında NoSuchElementException fırlatsın
-//        Mockito.when(taskService.markTaskAsCompleted(taskId)).thenThrow(new NoSuchElementException("Task not found"));
-//
-//        mockMvc.perform(MockMvcRequestBuilders.put("/api/tasks/{id}/complete", taskId)
-//                        .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isInternalServerError());
-//        // Eğer ControllerAdvice ile 404 dönüyorsan .isNotFound() yap
-//    }
-//    @Test
-//    public void testCreateTask_InvalidInput() throws Exception {
-//        String invalidJson = "{\"name\":\"\"}"; // boş name
-//
-//        mockMvc.perform(MockMvcRequestBuilders.post("/api/tasks")
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content(invalidJson))
-//                .andExpect(status().isBadRequest());
-//    }
-
 
 }
