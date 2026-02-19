@@ -27,7 +27,7 @@ services:
 
   todo-frontend:
     build:
-      context: C:\Users\rezan\OneDrive\Masaüstü\todo-frontend
+      context: ../todo-frontend
     container_name: todo-frontend
     ports:
       - "3000:80"
